@@ -2,6 +2,12 @@
 
     - git clone --depth 1 https://github.com/odoo/odoo.git
 
+# para poder usar psycopg2 y python-ldap
+
+    - sudo apt update
+    - sudo apt install -y libpq-dev python3-dev gcc
+    - sudo apt install -y libsasl2-dev libldap2-dev libssl-dev python3-dev gcc
+
 # comando para deplegar y crear la db (solo se debe usar para crear la base de datos porque si no, la recrea de nuevo y borrar los otros datos):
 
     - python3 odoo-bin --addons-path=addons -d odoo_db -r admin -w admin --db_host=localhost --db_port=5432 -i base
