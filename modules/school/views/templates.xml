@@ -1,14 +1,14 @@
 <odoo>
     <data>
-        <!-- Tree View -->
-        <record id="student_tree_view" model="ir.ui.view">
-            <field name="name">student.tree.view</field>
+        <!-- list View -->
+        <record id="student_list_view" model="ir.ui.view">
+            <field name="name">student.list.view</field>
             <field name="model">school.student</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name"/>
                     <field name="age"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -28,7 +28,7 @@
         <record id="action_student" model="ir.actions.act_window">
             <field name="name">Students</field>
             <field name="res_model">school.student</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">List,form</field>
         </record>
 
         <!-- Menu -->

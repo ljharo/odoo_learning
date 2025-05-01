@@ -1,0 +1,51 @@
+<odoo>
+    <!-- Menú principal -->
+    <menuitem id="menu_tareas_root" name="Tareas" sequence="10"/>
+    <menuitem id="menu_tareas" name="Mis Tareas" parent="menu_tareas_root"/>
+
+    <!-- Vista de lista (list) -->
+    <record id="view_tarea_list" model="ir.ui.view">
+        <field name="name">Lista de Tareas</field>
+        <field name="model">tasks.tarea</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="descripcion"/>
+                <field name="fecha_inicio"/>
+                <field name="fecha_fin"/>
+                <field name="completada"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Vista de formulario -->
+    <record id="view_tarea_form" model="ir.ui.view">
+        <field name="name">Formulario de Tarea</field>
+        <field name="model">tasks.tarea</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="descripcion"/>
+                        <field name="fecha_inicio"/>
+                        <field name="fecha_fin"/>
+                        <field name="completada"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acciones y menús -->
+    <record id="action_tareas" model="ir.actions.act_window">
+        <field name="name">Tareas</field>
+        <field name="res_model">tasks.tarea</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_tareas_action" name="Lista de Tareas" parent="menu_tareas" action="action_tareas"/>
+    <menuitem id="menu_tareas_root" name="tareas"/>
+    <menuitem id="menu_tareas_main" name="tareas" parent="menu_tareas_root"/>
+    <menuitem id="menu_tareas_list" name="tareas List" parent="menu_tareas_main" action="action_tareas"/>
+</odoo>
