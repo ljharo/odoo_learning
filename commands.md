@@ -1,4 +1,4 @@
-# para descargar odoo, la primera rama, ya que si descargamos el resto de ramas pesaria 8 gb, en cambio descargando la primera, solo pesa 150 mb
+i# para descargar odoo, la primera rama, ya que si descargamos el resto de ramas pesaria 8 gb, en cambio descargando la primera, solo pesa 150 mb
 
     - git clone --depth 1 https://github.com/odoo/odoo.git
 
@@ -19,3 +19,5 @@
 ## agregar mis modelos propios
 
     - python3 odoo-bin --addons-path=addons,modules -d odoo_db -r admin -w admin --db_host=localhost --db_port=5432
+
+https://lixie-dev-prueba4.odoo.com/web
